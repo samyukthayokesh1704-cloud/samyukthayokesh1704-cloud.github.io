@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Samyuktha Yokesh | Brand Marketeer & Strategist</title>
+  <meta name="description" content="Portfolio of Samyuktha Yokesh — Energetic B.Com student, Red Bull Student Marketeer, National Parliament Award Winner, and Brand Strategist." />
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..900;1,9..40,300..900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            accent: '#FF6A24',
+            'accent-hover': '#E55816',
+            'dark-bg': '#0E0E0C',
+            'dark-surface': '#151512',
+            'dark-card': '#1B1B18',
+            'dark-border': '#292925',
+            'light-cream': '#F4EFEA',
+            'muted-cream': '#B5AFA6',
+          },
+          fontFamily: {
+            sans: ['DM Sans', 'sans-serif'],
+            serif: ['Libre Baskerville', 'serif'],
+            display: ['Space Grotesk', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- AOS Animation CDN -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom Styles -->
+  <style>
+    body {
+      background-color: #0E0E0C;
+      color: #F4EFEA;
+      font-family: 'DM Sans', sans-serif;
+      overflow-x: hidden;
+    }
+    .serif-accent {
+      font-family: 'Libre Baskerville', serif;
+      font-style: italic;
+    }
+    .glow-accent {
+      box-shadow: 0 0 40px -10px rgba(255, 106, 36, 0.25);
+    }
+    .bento-card {
+      background: #161613;
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .bento-card:hover {
+      border-color: rgba(255, 106, 36, 0.35);
+      transform: translateY(-3px);
+      box-shadow: 0 16px 32px -8px rgba(0, 0, 0, 0.5);
+    }
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0E0E0C;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #2A2A26;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #FF6A24;
+    }
+  </style>
+</head>
+<body class="antialiased selection:bg-accent selection:text-white">
+
+  <!-- Ambient Glow Background -->
+  <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+    <div class="absolute -top-40 left-1/2 -translate-x-1/2 w-[700px] h-[500px] bg-gradient-to-b from-[#FF6A24]/10 to-transparent blur-[140px] rounded-full"></div>
+    <div class="absolute top-[40%] -right-40 w-[500px] h-[500px] bg-[#FF6A24]/5 blur-[160px] rounded-full"></div>
+    <div class="absolute bottom-20 -left-40 w-[600px] h-[500px] bg-[#FF6A24]/5 blur-[160px] rounded-full"></div>
+  </div>
+
+  <!-- Header / Navigation -->
+  <header class="sticky top-0 z-50 backdrop-blur-xl bg-dark-bg/80 border-b border-white/5 transition-all">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <a href="#hero" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded-full bg-accent/10 border border-accent/30 flex items-center justify-center font-display font-bold text-accent group-hover:bg-accent group-hover:text-white transition-all">
+          SY
+        </div>
+        <div>
+          <span class="font-display font-semibold tracking-tight text-light-cream text-lg block leading-none">Samyuktha Yokesh</span>
+          <span class="text-xs text-muted-cream tracking-wide">Brand Marketeer & Strategist</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-muted-cream">
+        <a href="#about" class="hover:text-accent transition-colors">Story</a>
+        <a href="#experience" class="hover:text-accent transition-colors">Experience</a>
+        <a href="#achievements" class="hover:text-accent transition-colors">Honors</a>
+        <a href="#sidequest" class="hover:text-accent transition-colors">Sidequest</a>
+        <a href="#skills" class="hover:text-accent transition-colors">Skills</a>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="flex items-center gap-3">
+        <a href="resume.html" class="inline-flex items-center gap-2 px-4 py-2 text-xs font-semibold uppercase tracking-wider rounded-full bg-white/5 border border-white/10 hover:border-accent text-light-cream hover:text-accent transition-all">
+          <i data-lucide="file-text" class="w-4 h-4"></i>
+          <span>ATS Resume</span>
+        </a>
+        <a href="mailto:samyukthayokesh1704@gmail.com" class="inline-flex items-center gap-2 px-4 py-2 text-xs font-semibold uppercase tracking-wider rounded-full bg-accent hover:bg-accent-hover text-white shadow-lg shadow-accent/20 transition-all">
+          <i data-lucide="mail" class="w-4 h-4"></i>
+          <span class="hidden sm:inline">Let's Talk</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="relative z-10 max-w-7xl mx-auto px-6 pt-12 pb-24 space-y-24">
+
+    <!-- HERO SECTION -->
+    <section id="hero" class="pt-6 pb-12 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      
+      <!-- Left Column: Editorial Headline -->
+      <div class="lg:col-span-7 space-y-6" data-aos="fade-up" data-aos-duration="900">
+        
+        <!-- Open to Work Badge -->
+        <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-[#1A1A16] border border-white/10 text-xs font-medium text-light-cream">
+          <span class="relative flex h-2.5 w-2.5">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+          </span>
+          <span>Open to High-Energy Brand & Marketing Roles</span>
+        </div>
+
+        <!-- Big Headline -->
+        <h1 class="text-4xl sm:text-5xl md:text-6xl font-display font-bold tracking-tight text-light-cream leading-[1.1]">
+          Connecting people, driving impact, and <span class="serif-accent text-accent font-normal">making things happen.</span>
+        </h1>
+
+        <!-- Subheading with Typed.js dynamic text -->
+        <p class="text-lg sm:text-xl text-muted-cream leading-relaxed max-w-2xl">
+          Hi, I'm <strong class="text-light-cream font-medium">Samyuktha</strong> — an energetic B.Com student & brand strategist with a track record of running high-profile campaigns at Red Bull, debating in the National Parliament, and storytelling in front of the lens.
+        </p>
+
+        <!-- Dynamic Typed Subtext -->
+        <div class="flex items-center gap-2 text-sm sm:text-base font-mono text-accent">
+          <span>&gt; Currently focusing on:</span>
+          <span id="typed-roles" class="text-light-cream underline decoration-accent/60 underline-offset-4"></span>
+        </div>
+
+        <!-- Metric Badges -->
+        <div class="pt-4 grid grid-cols-2 sm:grid-cols-4 gap-4 border-t border-white/5">
+          <div class="p-3 rounded-xl bg-white/[0.02] border border-white/5">
+            <span class="text-2xl font-bold font-display text-accent block">1 Year</span>
+            <span class="text-xs text-muted-cream">Red Bull Marketeer</span>
+          </div>
+          <div class="p-3 rounded-xl bg-white/[0.02] border border-white/5">
+            <span class="text-2xl font-bold font-display text-accent block">Top 12</span>
+            <span class="text-xs text-muted-cream">National Finalist</span>
+          </div>
+          <div class="p-3 rounded-xl bg-white/[0.02] border border-white/5">
+            <span class="text-2xl font-bold font-display text-accent block">MVP</span>
+            <span class="text-xs text-muted-cream">Regional Parliament</span>
+          </div>
+          <div class="p-3 rounded-xl bg-white/[0.02] border border-white/5">
+            <span class="text-2xl font-bold font-display text-accent block">92%</span>
+            <span class="text-xs text-muted-cream">Academic Honors</span>
+          </div>
+        </div>
+
+        <!-- CTAs -->
+        <div class="pt-2 flex flex-wrap items-center gap-4">
+          <a href="#experience" class="px-6 py-3 rounded-full bg-accent hover:bg-accent-hover text-white font-medium text-sm inline-flex items-center gap-2 shadow-lg shadow-accent/20 transition-all">
+            <span>Explore Experience</span>
+            <i data-lucide="arrow-down-right" class="w-4 h-4"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/samyuktha-y-b30a7939b" target="_blank" rel="noopener noreferrer" class="px-6 py-3 rounded-full bg-white/5 hover:bg-white/10 text-light-cream font-medium text-sm inline-flex items-center gap-2 border border-white/10 transition-all">
+            <i data-lucide="linkedin" class="w-4 h-4 text-[#0077b5]"></i>
+            <span>LinkedIn Profile</span>
+          </a>
+          <a href="https://github.com/samyukthayokesh1704-cloud" target="_blank" rel="noopener noreferrer" class="p-3 rounded-full bg-white/5 hover:bg-white/10 text-light-cream border border-white/10 transition-all" title="GitHub">
+            <i data-lucide="github" class="w-5 h-5"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Right Column: 3D Tilt Floating Hero Card -->
+      <div class="lg:col-span-5 flex justify-center" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+        <div class="tilt-card w-full max-w-md p-6 sm:p-8 rounded-3xl bento-card relative overflow-hidden group shadow-2xl" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-perspective="1000">
+          
+          <!-- Inner Ambient Glow -->
+          <div class="absolute top-0 right-0 w-44 h-44 bg-accent/15 blur-3xl rounded-full pointer-events-none"></div>
+
+          <!-- Header Bar of Card -->
+          <div class="flex items-center justify-between pb-6 border-b border-white/10">
+            <div class="flex items-center gap-2">
+              <span class="w-3 h-3 rounded-full bg-red-500/80 inline-block"></span>
+              <span class="w-3 h-3 rounded-full bg-yellow-500/80 inline-block"></span>
+              <span class="w-3 h-3 rounded-full bg-green-500/80 inline-block"></span>
+            </div>
+            <span class="text-xs font-mono text-muted-cream">@samyuktha-y</span>
+          </div>
+
+          <!-- Profile Photo Slot with Avatar Failsafe -->
+          <div class="pt-6 flex flex-col items-center text-center">
+            <div class="relative mb-4">
+              <!-- Avatar Failsafe: loads profile.jpg if available, else falls back to generated UI Avatar -->
+              <img 
+                id="profile-avatar"
+                src="profile.jpg" 
+                onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=Samyuktha+Yokesh&background=FF6A24&color=ffffff&size=256&bold=true';" 
+                alt="Samyuktha Yokesh" 
+                class="w-32 h-32 rounded-2xl object-cover ring-2 ring-accent/40 shadow-xl"
+              />
+              <span class="absolute -bottom-2 -right-2 p-1.5 rounded-full bg-dark-bg border border-white/10 text-accent" title="Verified Creator">
+                <i data-lucide="sparkles" class="w-4 h-4"></i>
+              </span>
+            </div>
+
+            <h2 class="text-2xl font-display font-bold text-light-cream">Samyuktha Yokesh</h2>
+            <p class="text-xs font-medium text-accent uppercase tracking-widest mt-1">Student Marketeer & Leader</p>
+            <p class="text-sm text-muted-cream mt-3 px-4">
+              Kumaraguru College of Liberal Arts & Science (KCLAS) • Coimbatore, India
+            </p>
+          </div>
+
+          <!-- Highlights List inside card -->
+          <div class="mt-6 pt-6 border-t border-white/10 space-y-3 text-xs text-light-cream/90">
+            <div class="flex items-center justify-between p-2.5 rounded-xl bg-white/[0.03]">
+              <span class="flex items-center gap-2 text-muted-cream">
+                <i data-lucide="award" class="w-4 h-4 text-accent"></i> Best Journalist
+              </span>
+              <span class="font-medium text-light-cream">New Delhi (Parliament)</span>
+            </div>
+            <div class="flex items-center justify-between p-2.5 rounded-xl bg-white/[0.03]">
+              <span class="flex items-center gap-2 text-muted-cream">
+                <i data-lucide="zap" class="w-4 h-4 text-accent"></i> Red Bull Events
+              </span>
+              <span class="font-medium text-light-cream">F4, Formula Bharat, Four2Score</span>
+            </div>
+            <div class="flex items-center justify-between p-2.5 rounded-xl bg-white/[0.03]">
+              <span class="flex items-center gap-2 text-muted-cream">
+                <i data-lucide="heart" class="w-4 h-4 text-accent"></i> Community Lead
+              </span>
+              <span class="font-medium text-light-cream">Animal Welfare Forum</span>
+            </div>
+          </div>
+
+          <!-- Bottom Card Action -->
+          <div class="mt-6 pt-4 flex gap-3">
+            <a href="resume.html" class="w-full py-2.5 px-4 rounded-xl bg-accent/20 hover:bg-accent text-accent hover:text-white border border-accent/40 font-medium text-xs text-center transition-all flex items-center justify-center gap-2">
+              <i data-lucide="download" class="w-4 h-4"></i>
+              <span>View & Download ATS Resume</span>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: BENTO GRID SHOWCASE -->
+    <section id="experience" class="space-y-8">
+      
+      <!-- Section Header -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-white/10 pb-6" data-aos="fade-up">
+        <div>
+          <span class="text-xs uppercase tracking-widest text-accent font-semibold block mb-1">Featured Chapters</span>
+          <h2 class="text-3xl sm:text-4xl font-display font-bold text-light-cream">
+            Experience & <span class="serif-accent font-normal text-accent">Milestones</span>
+          </h2>
+        </div>
+        <p class="text-sm text-muted-cream max-w-md">
+          A modular glimpse into on-ground marketing executions, national leadership stages, and creative collaborations.
+        </p>
+      </div>
+
+      <!-- Bento Grid Container -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- CARD 1: RED BULL (Large Span - 2 cols on lg) -->
+        <div class="bento-card rounded-3xl p-6 sm:p-8 lg:col-span-2 space-y-6 flex flex-col justify-between" data-aos="fade-up" data-aos-duration="800">
+          <div>
+            <div class="flex flex-wrap items-center justify-between gap-3 mb-4">
+              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#E10600]/10 border border-[#E10600]/30 text-xs font-semibold text-[#FF3B30]">
+                <i data-lucide="flame" class="w-3.5 h-3.5"></i>
+                <span>Red Bull • Coimbatore</span>
+              </div>
+              <span class="text-xs font-mono text-muted-cream">1 Full Year • Student Marketeer</span>
+            </div>
+
+            <h3 class="text-2xl sm:text-3xl font-display font-bold text-light-cream">
+              One Year of <span class="serif-accent text-accent font-normal">Making Things Happen</span>
+            </h3>
+
+            <p class="text-muted-cream text-sm sm:text-base leading-relaxed mt-3">
+              I joined Red Bull as a Student Marketeer, not knowing just how much a year could teach me about marketing, people, and creating the right moment for a product. Over the year, I transitioned from executing a brief to architecting the consumer journey, objective, strategy, and full experience.
+            </p>
+
+            <!-- Picture Slot for Red Bull -->
+            <div class="mt-5 rounded-2xl overflow-hidden border border-white/10 relative group aspect-video sm:aspect-[21/9] bg-[#1F1F1C]">
+              <img 
+                src="redbull.jpg" 
+                alt="Red Bull Student Marketeer Experience" 
+                class="w-full h-full object-cover"
+                onerror="this.style.display='none'; document.getElementById('rb-fallback').style.display='flex';"
+              />
+              <div id="rb-fallback" class="w-full h-full flex flex-col items-center justify-center p-6 text-center bg-gradient-to-br from-[#1C1C18] to-[#121210]">
+                <div class="w-12 h-12 rounded-full bg-accent/10 border border-accent/30 flex items-center justify-center text-accent mb-3">
+                  <i data-lucide="camera" class="w-6 h-6"></i>
+                </div>
+                <p class="text-sm font-medium text-light-cream">Red Bull Event Gallery</p>
+                <p class="text-xs text-muted-cream mt-1 max-w-sm">
+                  Formula Bharat, F4 Race & Four2Score Finale moments. (Upload <code class="text-accent">redbull.jpg</code> to feature your real event photos!)
+                </p>
+              </div>
+            </div>
+
+            <!-- Event Milestones List -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
+              <div class="p-4 rounded-xl bg-white/[0.02] border border-white/5 space-y-1.5">
+                <div class="flex items-center gap-2 text-light-cream font-medium text-sm">
+                  <i data-lucide="flag" class="w-4 h-4 text-accent"></i>
+                  <span>F4 Race Sampling</span>
+                </div>
+                <p class="text-xs text-muted-cream">
+                  My first taste of getting the brand directly into the hands of consumers and building instant product affinity.
+                </p>
+              </div>
+
+              <div class="p-4 rounded-xl bg-white/[0.02] border border-white/5 space-y-1.5">
+                <div class="flex items-center gap-2 text-light-cream font-medium text-sm">
+                  <i data-lucide="car" class="w-4 h-4 text-accent"></i>
+                  <span>Formula Bharat Debut</span>
+                </div>
+                <p class="text-xs text-muted-cream">
+                  Set up racing SIMs and brought the Red Bull Mini to Coimbatore for the first time with massive crowd engagement.
+                </p>
+              </div>
+
+              <div class="p-4 rounded-xl bg-white/[0.02] border border-white/5 space-y-1.5">
+                <div class="flex items-center gap-2 text-light-cream font-medium text-sm">
+                  <i data-lucide="target" class="w-4 h-4 text-accent"></i>
+                  <span>Four2Score Finale</span>
+                </div>
+                <p class="text-xs text-muted-cream">
+                  First team to bring the national finale to Coimbatore; months of coordination, logistics, and explosive energy.
+                </p>
+              </div>
+
+              <div class="p-4 rounded-xl bg-white/[0.02] border border-white/5 space-y-1.5">
+                <div class="flex items-center gap-2 text-light-cream font-medium text-sm">
+                  <i data-lucide="users" class="w-4 h-4 text-accent"></i>
+                  <span>Campus & Office Missions</span>
+                </div>
+                <p class="text-xs text-muted-cream">
+                  Countless sampling missions alongside regional sales teams, adapting messaging across diverse audiences.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-4 border-t border-white/5 flex items-center justify-between text-xs text-muted-cream font-mono">
+            <span>KEY LEARNING: Execution • Consumer Insight • Scale</span>
+            <span class="text-accent font-semibold">100% Impact</span>
+          </div>
+        </div>
+
+        <!-- CARD 2: THE SIDEQUEST - MODELING -->
+        <div id="sidequest" class="bento-card rounded-3xl p-6 sm:p-8 space-y-6 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="150">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/10 border border-accent/30 text-xs font-semibold text-accent">
+                <i data-lucide="camera" class="w-3.5 h-3.5"></i>
+                <span>Creative Expression</span>
+              </span>
+              <span class="text-xs font-mono text-muted-cream">The Sidequest</span>
+            </div>
+
+            <h3 class="text-2xl font-display font-bold text-light-cream">
+              Brand Modeling & <span class="serif-accent text-accent font-normal">Visual Story</span>
+            </h3>
+
+            <p class="text-muted-cream text-sm leading-relaxed mt-2">
+              "Somewhere between marketing and college, I stepped out of my comfort zone. Being in front of the camera taught me how to communicate a brand's narrative without saying a single word."
+            </p>
+
+            <!-- Picture Slot for Modeling -->
+            <div class="mt-4 rounded-2xl overflow-hidden border border-white/10 relative group aspect-[4/3] bg-[#1F1F1C]">
+              <img 
+                src="modeling.jpg" 
+                alt="Brand Modeling Work" 
+                class="w-full h-full object-cover"
+                onerror="this.style.display='none'; document.getElementById('mod-fallback').style.display='flex';"
+              />
+              <div id="mod-fallback" class="w-full h-full flex flex-col items-center justify-center p-6 text-center bg-gradient-to-br from-[#1E1C1A] to-[#121210]">
+                <div class="w-10 h-10 rounded-full bg-accent/10 border border-accent/30 flex items-center justify-center text-accent mb-2">
+                  <i data-lucide="sparkles" class="w-5 h-5"></i>
+                </div>
+                <p class="text-sm font-medium text-light-cream">Editorial Lookbook</p>
+                <p class="text-xs text-muted-cream mt-1 max-w-xs">
+                  Collaborations with Kopy Kadai & independent creators. (Upload <code class="text-accent">modeling.jpg</code> here!)
+                </p>
+              </div>
+            </div>
+
+            <!-- Collab Link -->
+            <div class="mt-4 p-3 rounded-xl bg-white/[0.02] border border-white/5 flex items-center justify-between text-xs">
+              <span class="text-muted-cream">Featured Collab:</span>
+              <a href="https://www.instagram.com/kopy_kadai/" target="_blank" rel="noopener noreferrer" class="text-accent hover:underline font-medium inline-flex items-center gap-1">
+                <span>Kopy Kadai Look</span>
+                <i data-lucide="external-link" class="w-3 h-3"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="pt-4 border-t border-white/5 text-xs text-muted-cream">
+            <span class="font-medium text-light-cream">Skills Developed:</span> Body language, expression, creative direction & adaptability.
+          </div>
+        </div>
+
+        <!-- CARD 3: PARLIAMENT & DEBATE HONORS -->
+        <div id="achievements" class="bento-card rounded-3xl p-6 sm:p-8 space-y-6 flex flex-col justify-between" data-aos="fade-up">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-xs font-semibold text-amber-400">
+                <i data-lucide="trophy" class="w-3.5 h-3.5"></i>
+                <span>National Accolades</span>
+              </span>
+              <span class="text-xs font-mono text-muted-cream">Honors</span>
+            </div>
+
+            <h3 class="text-2xl font-display font-bold text-light-cream">
+              Parliament & <span class="serif-accent text-accent font-normal">Debate Honors</span>
+            </h3>
+
+            <div class="space-y-4 mt-4">
+              
+              <!-- Best Journalist Award -->
+              <div class="p-4 rounded-2xl bg-white/[0.02] border border-white/5 space-y-1">
+                <div class="flex items-center justify-between">
+                  <h4 class="text-sm font-bold text-light-cream flex items-center gap-2">
+                    <i data-lucide="award" class="w-4 h-4 text-accent"></i> Best Journalist Award
+                  </h4>
+                  <span class="text-[11px] font-mono text-amber-400">National Finale</span>
+                </div>
+                <p class="text-xs text-muted-cream leading-relaxed">
+                  National Young Indians Parliament at Old Parliament House, New Delhi. Conferred by Union Minister Shri Kiren Rijiju. Selected among top 12 from 400+ national participants.
+                </p>
+              </div>
+
+              <!-- MVP Award -->
+              <div class="p-4 rounded-2xl bg-white/[0.02] border border-white/5 space-y-1">
+                <div class="flex items-center justify-between">
+                  <h4 class="text-sm font-bold text-light-cream flex items-center gap-2">
+                    <i data-lucide="crown" class="w-4 h-4 text-accent"></i> Most Valuable Parliamentarian (MVP)
+                  </h4>
+                  <span class="text-[11px] font-mono text-amber-400">Regional Round</span>
+                </div>
+                <p class="text-xs text-muted-cream leading-relaxed">
+                  Egmore Museum, Chennai. Awarded by Former Vice President Shri Venkaiah Naidu. Served as Party Leader defending high-stakes debates.
+                </p>
+              </div>
+
+              <!-- Speech & Soccer -->
+              <div class="grid grid-cols-2 gap-3 pt-1">
+                <div class="p-3 rounded-xl bg-white/[0.02] border border-white/5">
+                  <span class="text-xs font-bold text-light-cream block">1st Place Debate</span>
+                  <span class="text-[11px] text-muted-cream">Multiple Speech Honors</span>
+                </div>
+                <div class="p-3 rounded-xl bg-white/[0.02] border border-white/5">
+                  <span class="text-xs font-bold text-light-cream block">Golden Boot 2020</span>
+                  <span class="text-[11px] text-muted-cream">First Kick Soccer</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="pt-4 border-t border-white/5 text-xs text-muted-cream">
+            Tour of Rashtrapati Bhavan & national-level policy discourse.
+          </div>
+        </div>
+
+        <!-- CARD 4: SOCIAL IMPACT & ANIMAL WELFARE -->
+        <div class="bento-card rounded-3xl p-6 sm:p-8 space-y-6 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="100">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-xs font-semibold text-emerald-400">
+                <i data-lucide="heart" class="w-3.5 h-3.5"></i>
+                <span>Community & Welfare</span>
+              </span>
+              <span class="text-xs font-mono text-muted-cream">Social Impact</span>
+            </div>
+
+            <h3 class="text-2xl font-display font-bold text-light-cream">
+              Animal Welfare & <span class="serif-accent text-accent font-normal">Leadership</span>
+            </h3>
+
+            <p class="text-muted-cream text-sm leading-relaxed mt-2">
+              Leading grassroots campaigns, organizing peace festivals, and championing animal welfare initiatives across Coimbatore.
+            </p>
+
+            <!-- Picture Slot for Animal Rescue -->
+            <div class="mt-4 rounded-2xl overflow-hidden border border-white/10 relative group aspect-[16/9] bg-[#1F1F1C]">
+              <img 
+                src="animal-rescue.jpg" 
+                alt="Animal Welfare & Rescue" 
+                class="w-full h-full object-cover"
+                onerror="this.style.display='none'; document.getElementById('ar-fallback').style.display='flex';"
+              />
+              <div id="ar-fallback" class="w-full h-full flex flex-col items-center justify-center p-6 text-center bg-gradient-to-br from-[#191E1A] to-[#121210]">
+                <div class="w-10 h-10 rounded-full bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 mb-2">
+                  <i data-lucide="shield" class="w-5 h-5"></i>
+                </div>
+                <p class="text-sm font-medium text-light-cream">Animal Welfare in Action</p>
+                <p class="text-xs text-muted-cream mt-1 max-w-xs">
+                  KCLAS Forum & Humane Animal Society drives. (Upload <code class="text-accent">animal-rescue.jpg</code> to show your rescue photos!)
+                </p>
+              </div>
+            </div>
+
+            <div class="mt-4 space-y-2 text-xs">
+              <div class="flex items-center gap-2 text-light-cream">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400"></i>
+                <span><strong>Lead Executive</strong> — Animal Welfare Forum, KCLAS</span>
+              </div>
+              <div class="flex items-center gap-2 text-light-cream">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400"></i>
+                <span><strong>Organizer's Team</strong> — Coimbatore Peace Fest (Shanti Ashram)</span>
+              </div>
+              <div class="flex items-center gap-2 text-light-cream">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400"></i>
+                <span><strong>Active Volunteer</strong> — Humane Animal Society & NSS</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-4 border-t border-white/5 text-xs text-muted-cream">
+            Committed to driving empathetic, community-centered impact.
+          </div>
+        </div>
+
+        <!-- CARD 5: ACADEMICS & CERTIFICATIONS -->
+        <div class="bento-card rounded-3xl p-6 sm:p-8 space-y-6 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="200">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/30 text-xs font-semibold text-blue-400">
+                <i data-lucide="graduation-cap" class="w-3.5 h-3.5"></i>
+                <span>Education & Certs</span>
+              </span>
+              <span class="text-xs font-mono text-muted-cream">KCLAS</span>
+            </div>
+
+            <h3 class="text-2xl font-display font-bold text-light-cream">
+              Academic Foundation & <span class="serif-accent text-accent font-normal">Learning</span>
+            </h3>
+
+            <!-- Academics -->
+            <div class="mt-4 p-4 rounded-2xl bg-white/[0.02] border border-white/5">
+              <span class="text-xs font-semibold text-accent uppercase tracking-wider block">Degree</span>
+              <h4 class="text-base font-bold text-light-cream mt-0.5">Bachelor of Commerce (B.Com)</h4>
+              <p class="text-xs text-muted-cream">Kumaraguru College of Liberal Arts and Science</p>
+              
+              <div class="flex gap-4 mt-3 pt-3 border-t border-white/5 text-xs font-mono">
+                <div><span class="text-muted-cream">12th:</span> <strong class="text-light-cream">92%</strong></div>
+                <div><span class="text-muted-cream">11th:</span> <strong class="text-light-cream">91%</strong></div>
+                <div><span class="text-muted-cream">10th:</span> <strong class="text-light-cream">87%</strong></div>
+              </div>
+            </div>
+
+            <!-- Certifications list -->
+            <div class="mt-4 space-y-2 text-xs">
+              <div class="p-2.5 rounded-xl bg-white/[0.02] border border-white/5 flex items-center justify-between">
+                <span class="text-light-cream font-medium">Foundations of Project Management</span>
+                <span class="text-muted-cream text-[11px]">Coursera</span>
+              </div>
+              <div class="p-2.5 rounded-xl bg-white/[0.02] border border-white/5 flex items-center justify-between">
+                <span class="text-light-cream font-medium">Effective Leadership</span>
+                <span class="text-muted-cream text-[11px]">HP LIFE</span>
+              </div>
+              <div class="p-2.5 rounded-xl bg-white/[0.02] border border-white/5 flex items-center justify-between">
+                <span class="text-light-cream font-medium">English Today Certification</span>
+                <span class="text-muted-cream text-[11px]">SQA & NABET</span>
+              </div>
+              <div class="p-2.5 rounded-xl bg-white/[0.02] border border-white/5 flex items-center justify-between">
+                <span class="text-light-cream font-medium">Outbound Experiential Learning</span>
+                <span class="text-muted-cream text-[11px]">LEAP Academy</span>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="pt-4 border-t border-white/5 text-xs text-muted-cream">
+            Continuous learner committed to practical, business-ready growth.
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 3: SKILLS MATRIX -->
+    <section id="skills" class="space-y-8" data-aos="fade-up">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-white/10 pb-6">
+        <div>
+          <span class="text-xs uppercase tracking-widest text-accent font-semibold block mb-1">Toolbox & Superpowers</span>
+          <h2 class="text-3xl sm:text-4xl font-display font-bold text-light-cream">
+            Core Competencies & <span class="serif-accent font-normal text-accent">Skills</span>
+          </h2>
+        </div>
+        <p class="text-sm text-muted-cream max-w-md">
+          A blend of strategic marketing instincts, financial acumen, and high-impact interpersonal communication.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+        <!-- Column 1: Marketing & Brand -->
+        <div class="bento-card rounded-3xl p-6 sm:p-8 space-y-4">
+          <div class="w-10 h-10 rounded-xl bg-accent/10 border border-accent/30 flex items-center justify-center text-accent">
+            <i data-lucide="megaphone" class="w-5 h-5"></i>
+          </div>
+          <h3 class="text-xl font-display font-bold text-light-cream">Brand & Marketing</h3>
+          <p class="text-xs text-muted-cream leading-relaxed">
+            Crafting memorable brand activations, understanding consumer journeys, and driving experiential engagement.
+          </p>
+          <div class="flex flex-wrap gap-2 pt-2">
+            <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs text-light-cream">Brand Awareness</span>
+            <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs text-light-cream">Marketing Strategy</span>
+            <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs text-light-cream">Digital Marketing</span>
+            <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs text-light-cream">SEO Fundamentals</span>
+            <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs text-light-cream">Sampling & Execution</span>
+            <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs text-light-cream">Event Coordination</span>
+          </div>
+        </div>
+
+        <!-- Column 2: Leadership & Communication -->
+        <div class="bento-card rounded-3xl p-6 sm:p-8 space-y-4">
+          <div class="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400">
+            <i data-lucide="mic" class="w-5 h-5"></i>
+          </div>
+          <h3 class="text-xl font-display font-bold text-light-cream">Leadership & Speech</h3>
+          <p class="text-xs text-muted-cream leading-relaxed">
+            Proven ability to hold a room, present complex narratives, negotiate with stakeholders, and inspire teams.
+          </p>
+          <div class="flex flex-wrap gap-2 pt-2">
+            <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs text-light-cream">Public Speaking</span>
+            <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs text-light-cream">Debate & Argumentation</span>
+            <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs text-light-cream">Stakeholder Negotiation</span>
+            <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs text-light-cream">Presentation & Pitching</span>
+            <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs text-light-cream">Cross-Functional Teamwork</span>
+            <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs text-light-cream">Crisis Adaptability</span>
+          </div>
+        </div>
+
+        <!-- Column 3: Business & Technology -->
+        <div class="bento-card rounded-3xl p-6 sm:p-8 space-y-4">
+          <div class="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-500/30 flex items-center justify-center text-blue-400">
+            <i data-lucide="briefcase" class="w-5 h-5"></i>
+          </div>
+          <h3 class="text-xl font-display font-bold text-light-cream">Business & Systems</h3>
+          <p class="text-xs text-muted-cream leading-relaxed">
+            Rigorous commercial understanding with practical experience in accounting software, reporting, and taxation.
+          </p>
+          <div class="flex flex-wrap gap-2 pt-2">
+            <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs text-light-cream">Tally ERP</span>
+            <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs text-light-cream">Bookkeeping & Accounting</span>
+            <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs text-light-cream">Taxation Basics</span>
+            <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs text-light-cream">Project Management</span>
+            <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs text-light-cream">Data Reporting</span>
+            <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs text-light-cream">Market Research</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 4: CALL TO ACTION / CONTACT FOOTER -->
+    <section id="contact" class="pt-8" data-aos="fade-up">
+      <div class="rounded-3xl bento-card p-8 sm:p-14 text-center relative overflow-hidden">
+        
+        <!-- Glow Blob inside card -->
+        <div class="absolute inset-0 pointer-events-none flex items-center justify-center">
+          <div class="w-96 h-96 bg-accent/15 blur-3xl rounded-full"></div>
+        </div>
+
+        <div class="relative z-10 max-w-2xl mx-auto space-y-6">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/10 border border-accent/30 text-xs font-semibold text-accent">
+            <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+            <span>Ready for the Next Big Challenge</span>
+          </div>
+
+          <h2 class="text-3xl sm:text-5xl font-display font-bold text-light-cream tracking-tight">
+            Let's create unforgettable <span class="serif-accent text-accent font-normal">brand moments</span> together.
+          </h2>
+
+          <p class="text-muted-cream text-base sm:text-lg leading-relaxed">
+            Whether you're looking for an energetic brand marketeer, campaign coordinator, or creative collaborator, my inbox is always open.
+          </p>
+
+          <div class="pt-4 flex flex-wrap items-center justify-center gap-4">
+            <a href="mailto:samyukthayokesh1704@gmail.com" class="px-8 py-4 rounded-full bg-accent hover:bg-accent-hover text-white font-semibold text-sm inline-flex items-center gap-2 shadow-xl shadow-accent/25 transition-all">
+              <i data-lucide="mail" class="w-4 h-4"></i>
+              <span>samyukthayokesh1704@gmail.com</span>
+            </a>
+            <a href="resume.html" class="px-8 py-4 rounded-full bg-white/5 hover:bg-white/10 text-light-cream border border-white/10 font-semibold text-sm inline-flex items-center gap-2 transition-all">
+              <i data-lucide="file-text" class="w-4 h-4 text-accent"></i>
+              <span>Open ATS Resume</span>
+            </a>
+          </div>
+
+          <div class="pt-8 flex items-center justify-center gap-6 text-muted-cream text-sm">
+            <a href="https://www.linkedin.com/in/samyuktha-y-b30a7939b" target="_blank" rel="noopener noreferrer" class="hover:text-accent flex items-center gap-2 transition-colors">
+              <i data-lucide="linkedin" class="w-4 h-4 text-[#0077b5]"></i>
+              <span>LinkedIn</span>
+            </a>
+            <span>•</span>
+            <a href="https://github.com/samyukthayokesh1704-cloud" target="_blank" rel="noopener noreferrer" class="hover:text-accent flex items-center gap-2 transition-colors">
+              <i data-lucide="github" class="w-4 h-4"></i>
+              <span>GitHub</span>
+            </a>
+            <span>•</span>
+            <a href="https://www.instagram.com/kopy_kadai/" target="_blank" rel="noopener noreferrer" class="hover:text-accent flex items-center gap-2 transition-colors">
+              <i data-lucide="instagram" class="w-4 h-4 text-[#E1306C]"></i>
+              <span>Instagram</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="border-t border-white/5 py-8 text-center text-xs text-muted-cream">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p>© <span id="current-year"></span> Samyuktha Yokesh. Built with passion & precision.</p>
+      <div class="flex items-center gap-4">
+        <a href="#hero" class="hover:text-accent transition-colors">Back to Top ↑</a>
+        <a href="resume.html" class="hover:text-accent transition-colors">Resume</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts: Typed.js, Vanilla-Tilt, AOS -->
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    // Initialize Lucide icons
+    lucide.createIcons();
+
+    // Set current year
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+
+    // Initialize AOS (Animate on Scroll)
+    AOS.init({
+      once: true,
+      duration: 800,
+      easing: 'ease-out-cubic',
+    });
+
+    // Initialize Typed.js for dynamic hero roles
+    new Typed('#typed-roles', {
+      strings: [
+        'Brand Strategy & Consumer Activations',
+        'Red Bull On-Ground Marketing',
+        'National Speech & Parliamentary Debate',
+        'Visual Storytelling & Modeling'
+      ],
+      typeSpeed: 40,
+      backSpeed: 25,
+      backDelay: 1800,
+      loop: true
+    });
+
+    // Initialize VanillaTilt for 3D card
+    VanillaTilt.init(document.querySelectorAll(".tilt-card"), {
+      max: 8,
+      speed: 400,
+      glare: true,
+      "max-glare": 0.2,
+    });
+  </script>
+</body>
+</html>
